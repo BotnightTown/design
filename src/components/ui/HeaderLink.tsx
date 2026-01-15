@@ -1,7 +1,7 @@
-export default function HeaderLink({title}: {title: string}){
+export default function HeaderLink({title, href}: {title: string, href: string}){
   return(
-    <button className="text-white font-main text-2xl hover:text-[#55CE9C] active:text-[#438A6C] cursor-pointer transition-all">
+    <a href={`#${href}`} className="text-white font-main text-base md:text-lg lg:text-2xl hover:text-[#55CE9C] active:text-[#438A6C] cursor-pointer transition-all">
       {title}
-    </button>
+    </a>
   )
 }

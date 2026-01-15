@@ -10,7 +10,7 @@ import TitleSection from "@/components/Sections/TitleSection";
 
 export default function Home() {
   return (
-    <div className="bg-(--main-ground)">
+    <div className="w-full bg-(--main-ground)">
       <TitleSection />
       <ReasonSection />
       <ChangeSection />

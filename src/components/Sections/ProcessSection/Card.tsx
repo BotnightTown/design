@@ -11,7 +11,7 @@ export default function Card({
   children: ReactNode
 }) {
   return (
-    <div className="group w-126 h-57.5 p-10 relative">
+    <div className="group w-72 md:w-126 lg:w-full xl:w-126 h-26.5 lg:h-57.5 p-5  xl:p-10 relative">
       <div
         className="
           absolute inset-0
@@ -22,11 +22,11 @@ export default function Card({
         "
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center gap-5 bg-none">
-        <H3 className="mb-4 text-xl font-semibold text-white">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-2 xl:gap-5 bg-none">
+        <H3 className="lg:mb-4 text-white">
           {title}
         </H3>
-        <p className="font-open-sans text-[18px] text-center text-(--text-body)">
+        <p className="font-open-sans text-[12px] lg:text-[18px] text-center text-(--text-body)">
           {text}
         </p>
       </div>

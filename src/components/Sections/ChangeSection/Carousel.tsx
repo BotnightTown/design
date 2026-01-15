@@ -58,9 +58,9 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="w-full relative flex flex-col items-center gap-5">
+    <div className="w-full h-max relative flex flex-col items-center gap-5">
       <div
-        className="w-full flex gap-10 overflow-x-scroll hide-scrollbar scroll-smooth px-10"
+        className="w-full flex gap-5 lg:gap-10 overflow-x-scroll hide-scrollbar scroll-smooth px-10"
         ref={scrollRef}
       >
         {cards.map((_, i) => (
@@ -70,30 +70,30 @@ export default function Carousel() {
 
       <div className="w-max grid grid-cols-3 justify-items-center items-center">
         <button 
-          className="w-12.5 h-12.5 border-4 border-white rounded-full relative cursor-pointer"
+          className="w-4 lg:w-12.5 h-4 lg:h-12.5 border lg:border-4 border-white rounded-full relative cursor-pointer"
           onClick={prev}
         >
           <IoChevronBackSharp 
-            className="text-4xl absolute top-1/2 left-5 -translate-x-1/2 -translate-y-1/2"
+            className="text-sm lg:text-4xl absolute top-1/2 left-1.75 lg:left-5 -translate-x-1/2 -translate-y-1/2"
           />
         </button>
-        <div className="w-max flex justify-center gap-2 mt-2">
+        <div className="w-max flex justify-center gap-2">
           {cards.map((_, i) => (
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`w-6 h-6 rounded-full cursor-pointer ${
+              className={`w-2.5 lg:w-6 h-2.5 lg:h-6 rounded-full cursor-pointer ${
                 i === activeIndex ? "bg-[#55CE9C]" : "bg-gray-400"
               }`}
             />
           ))}
         </div>
         <button 
-          className="w-12.5 h-12.5 border-4 border-white rounded-full relative cursor-pointer"
+          className="w-4 lg:w-12.5 h-4 lg:h-12.5 border lg:border-4 border-white rounded-full relative cursor-pointer"
           onClick={next}
         >
           <IoChevronForwardSharp 
-            className="text-4xl absolute top-1/2 left-6 -translate-x-1/2 -translate-y-1/2"
+            className="text-sm lg:text-4xl absolute top-1/2 left-1.75 lg:left-6 -translate-x-1/2 -translate-y-1/2"
           />
         </button>
       </div>
