@@ -7,7 +7,7 @@ export default function Button({title}: {title: string}){
 
   return(
     <button 
-      onClick={open}
+      onClick={()=>open('getDesign')}
       type="button"
       className="w-max h-max py-1.25 px-3.75 lg:py-2.5 lg:px-6.25 rounded-[10px] border-2 transition-all 
       border-white text-white hover:border-[#55CE9C] hover:text-[#55CE9C] 

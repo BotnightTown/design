@@ -1,22 +1,48 @@
 'use client'
 import { createContext, useContext, useState, ReactNode } from "react";
 
+type LiveStoryModalProps = {
+  clientName: string;
+  position: string;
+  liveStory: string;
+};
+
+type ModalPayloadMap = {
+  getDesign: undefined;
+  liveStory: LiveStoryModalProps;
+};
+
 type ModalContextType = {
-  open: () => void;
+  activeModal: keyof ModalPayloadMap | null;
+  modalProps: ModalPayloadMap[keyof ModalPayloadMap] | null;
+  open: <T extends keyof ModalPayloadMap>(
+    modal: T,
+    props?: ModalPayloadMap[T]
+  ) => void;
   close: () => void;
-  isOpen: boolean;
 };
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState<keyof ModalPayloadMap | null>(null);
+  const [modalProps, setModalProps] = useState<ModalPayloadMap[keyof ModalPayloadMap] | null>(null);
 
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
+  const open = <T extends keyof ModalPayloadMap>(
+    modal: T,
+    props?: ModalPayloadMap[T]
+  ) => {
+    setActiveModal(modal);
+    setModalProps(props ?? null);
+  };
+
+  const close = () => {
+    setActiveModal(null);
+    setModalProps(null);
+  };
 
   return (
-    <ModalContext.Provider value={{ isOpen, open, close }}>
+    <ModalContext.Provider value={{ activeModal, modalProps, open, close }}>
       {children}
     </ModalContext.Provider>
   );

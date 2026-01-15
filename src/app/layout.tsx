@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ModalProvider } from "@/context/ModalContext";
-import { Modal } from "@/components/ContactModal";
+import { Modal as LiveStoryModal } from "@/components/modals/LiveStoryModal";
+import { Modal as GetDesignModal } from "@/components/modals/ContactModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,8 @@ export default function RootLayout({
           <Header />
             {children}
           <Footer />
-          <Modal />
+          <LiveStoryModal />
+          <GetDesignModal />
         </ModalProvider>
       </body>
     </html>

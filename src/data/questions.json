@@ -1,0 +1,58 @@
+[
+  {
+    "question": "Can you do mobile and landing page designs?",
+    "answer": "Absolutely, our UI/UX design agency handles both web and mobile interfaces. While we don’t take landing pages as standalone projects, if we’re designing your product, we’ll definitely make those landing pages part of the whole experience."
+  },
+  {
+    "question": "How fast can you start working on my project?",
+    "answer": "We usually start within 3–5 business days after signing the agreement. If you need faster onboarding, we can prioritize your project — just let us know during the discovery call."
+  },
+  {
+    "question": "What happens during the 3-day free trial?",
+    "answer": "During the 3-day trial, we take one small real task from your product (e.g., 1–2 screens redesign, quick audit, or basic wireframes). You get to see our process, quality, and communication style with zero risk."
+  },
+  {
+    "question": "How do revisions work?",
+    "answer": "On Starter — 1 major round of revisions per task. On Growth — unlimited revisions. On Enterprise — unlimited + strategic feedback loops. We aim to reach pixel-perfect results together."
+  },
+  {
+    "question": "Do I need to provide a detailed brief or can I just describe the idea?",
+    "answer": "You don’t need a perfect brief. Just tell us your goals, show the current product (if any), and share access to tools (Figma, Slack, analytics, etc.). Our senior designers will ask the right questions to fill in the gaps."
+  },
+  {
+    "question": "Will I work directly with the designer?",
+    "answer": "Yes — 100% direct communication. You’ll have a dedicated senior designer (or team on higher plans) in your Slack channel. No middle managers or long email chains."
+  },
+  {
+    "question": "What if I’m not happy with the result?",
+    "answer": "We keep iterating until you’re satisfied. On Growth and Enterprise plans revisions are unlimited. If for any reason we can’t meet your expectations, you can cancel anytime after the minimum contract period."
+  },
+  {
+    "question": "Can I pause or cancel the subscription?",
+    "answer": "Yes. You can pause or cancel your subscription at any time after the minimum contract period (usually 2 months). No hidden fees."
+  },
+  {
+    "question": "Do you guarantee results (e.g. higher conversion, better retention)?",
+    "answer": "We guarantee high-quality design and fast delivery according to the agreed scope. While we can’t promise exact numbers, our designs are built with best practices for conversion, onboarding, and retention — and we track key metrics together."
+  },
+  {
+    "question": "How experienced are your designers?",
+    "answer": "All our designers are senior-level with 5+ years of experience in SaaS products. Many of them have worked on products with 100k+ users across fintech, CRM, healthtech, and developer tools."
+  },
+  {
+    "question": "Do you sign NDAs?",
+    "answer": "Yes, we happily sign NDAs before starting any work. Your product and data are always protected."
+  },
+  {
+    "question": "What tools do you use?",
+    "answer": "Mainly Figma (design & prototyping), FigJam (whiteboarding), Slack (communication), Notion/Linear/Jira (task management), Amplitude/Hotjar (analytics), and Webflow (no-code prototypes when needed)."
+  },
+  {
+    "question": "Can I see the work in progress?",
+    "answer": "Yes — daily or real-time access. You’ll see everything in shared Figma files and get regular updates via Slack."
+  },
+  {
+    "question": "What’s the difference between your plans?",
+    "answer": "Starter — perfect for quick MVP or small redesigns with limited budget. Growth — unlimited requests, full-time designer, ideal for fast-moving SaaS teams. Enterprise — dedicated team plus deep strategy for complex products and large-scale redesigns."
+  }
+]

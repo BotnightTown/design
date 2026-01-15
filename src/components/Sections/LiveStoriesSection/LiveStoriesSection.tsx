@@ -1,7 +1,14 @@
 'use client'
 import { useRef, useEffect } from "react";
 import LiveStoryCard from "./LiveStoryCard";
+import liveStories from "@/data/liveStories.json";
 import H2 from "@/components/ui/CustomTags/H2";
+
+interface LiveStory {
+  clientName: string;
+  position: string;
+  liveStory: string;
+};
 
 export default function InfiniteCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,10 +40,13 @@ export default function InfiniteCarousel() {
     return () => cancelAnimationFrame(rafId);
   }, []);
 
-  const items = [1, 2, 3, 4, 5];
-  const allItems = [...items, ...items, ...items];
+  const allItems: LiveStory[] = [
+    ...liveStories,
+    ...liveStories,
+    ...liveStories,
+  ];
 
-    const toggleScroll = () => {
+  const toggleScroll = () => {
     isPausedRef.current = !isPausedRef.current;
   };
   
@@ -51,8 +61,8 @@ export default function InfiniteCarousel() {
         mask-[linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]
         [-webkit-mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]"
       >
-        {allItems.map((_, index) => (
-          <LiveStoryCard key={index} />
+        {allItems.map((item, index) => (
+          <LiveStoryCard key={index} clientName={item.clientName} position={item.position} liveStory={item.liveStory}/>
         ))}
       </div>
     </div>

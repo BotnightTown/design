@@ -1,13 +1,13 @@
 'use client'
 import { createPortal } from "react-dom";
 import { useModal } from "@/context/ModalContext";
-import H2 from "./ui/CustomTags/H2";
+import H2 from "../ui/CustomTags/H2";
 import { RxCross2 } from "react-icons/rx";
 
 export const Modal = () => {
-  const { isOpen, close } = useModal();
+  const { activeModal, close } = useModal();
 
-  if (!isOpen) return null;
+  if (activeModal !== 'getDesign') return null;
 
   return createPortal(
     <div className="fixed inset-0 bg-[rgba(10,10,10,0.7)] flex items-center justify-center z-50">
@@ -57,7 +57,6 @@ export const Modal = () => {
               Ask and get answers!
             </button>
           </div>
-
         </form>
       </div>
     </div>,
